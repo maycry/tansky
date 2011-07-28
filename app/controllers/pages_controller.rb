@@ -1,11 +1,11 @@
 #encoding: utf-8
 class PagesController < ApplicationController
   def home
-    @title = "Дизайнер"
+    @title = "Танский Юрий — веб-дизайнер"
   end
 
   def about
-    @title = "ab"
+    @title = "Обо мне"
   end
 
 end
