@@ -1,6 +1,17 @@
 <div id="wrapper">
 	<%= render 'layouts/header'%>
-    <div id="works"> <a class="right work" href="#"><%= image_tag("1.jpg", :alt => "Work") %>
-    </a> <a class="left work" href="#"><%= image_tag("2.jpg", :alt => "Work") %></a> <a class="center work" href="#"><%= image_tag("3.jpg", :alt => "Work") %></a> </div>
+    <div id="works"> 
+    	<!--<a class="right work" href="#"><%= image_tag("1.jpg", :alt => "Work") %></a>
+    	<a class="left work" href="#"><%= image_tag("2.jpg", :alt => "Work") %></a>
+    	<a class="center work" href="#"><%= image_tag("3.jpg", :alt => "Work") %></a>-->
+    	<!--<% get_narticles.each do |article| %>
+    		<%= link_to image_tag(article.pic, :alt => article.name), article_path(article.id) %>
+    	<% end %>-->
+    	
+    	<% articles = get_narticles %>
+    	<%= link_to image_tag(articles.first.pic, :alt => articles.first.name, :class => "center work"), article_path(articles.first.id) %>
+    	<%= link_to image_tag(articles.second.pic, :alt => articles.second.name, :class => "left work"), article_path(articles.second.id) %>
+    	<%= link_to image_tag(articles.last.pic, :alt => articles.last.name, :class => "right work"), article_path(articles.last.id) %>
+    </div>
 </div>
 <%= render 'layouts/footer'%>
