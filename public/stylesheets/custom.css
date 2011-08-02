@@ -88,6 +88,13 @@ img{
 	width:15.5%;
 	padding-right:20px;
 }
+#logo a{
+	text-decoration:none;
+	color:#000;
+	background:none;
+	padding:0;
+	border-radius:0;
+}
 #mailto{
 	float:right;
 	margin-right:2%;

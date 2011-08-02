@@ -1,7 +1,11 @@
 <div id="header">
-    <div id="logo">ЮРИЙ ТАНСКИЙ<br>
+	<% if current_page?('/') %>
+    	<div id="logo">ЮРИЙ ТАНСКИЙ<br>
+    	<% else %>
+    	<div id="logo"><%= link_to 'ЮРИЙ ТАНСКИЙ', root_url %><br>
+    <% end %>
       <span class="webdes">веб-дизайнер</span></div>
-    <a href="mailto:tansky@tansky.com.ua" id="mailto">tansky@tansky.com.ua</a>
+    <%= mail_to "tansky@tansky.com.ua", "tansky@tansky.com.ua", :id => "mailto"  %>
     <ul>
       <li><%= link_to "ПОРТФОЛИО", articles_path %></li>
       <li><%= link_to "ОБО МНЕ", about_path %></li>

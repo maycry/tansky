@@ -1,35 +1,19 @@
-<h1>Listing articles</h1>
+<%= render 'layouts/header'%>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Pic</th>
-    <th>Describe</th>
-    <th>Process</th>
-    <th>Hook</th>
-    <th>Onmain</th>
-    <th>Link</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
+<ul>
 <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.name %></td>
-    <td><%= article.pic %></td>
-    <td><%= article.describe %></td>
-    <td><%= article.process %></td>
-    <td><%= article.hook %></td>
-    <td><%= article.onmain %></td>
-    <td><%= article.link %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <li>
+  	<%= link_to image_tag(article.pic), article_path(article.id) %>
+  	<%= article.name %>
+    <%= link_to 'Show', article %>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+  </li>
 <% end %>
-</table>
-
+</ul>
 <br />
 
 <%= link_to 'New Article', new_article_path %>
+
+<%= render 'layouts/footer'%>
