@@ -1,7 +1,9 @@
 Tansky::Application.routes.draw do
   resources :articles
 
-  match '/about',   :to => 'pages#about'
+  match 'about',   :to => 'pages#about'
+  match 'portfolio' => "Articles#index"
+  match 'portfolio/:id' => "Articles#show", :as => "work" 
   root :to => 'pages#home'
   
   get "pages/home"

@@ -4,7 +4,7 @@
 <ul>
 <% @articles.each do |article| %>
   <li>
-  	<%= link_to image_tag(article.pic), article_path(article.id) %>
+  	<%= link_to image_tag(article.pic), work_path(article.id) %>
   	<%= article.name %>
     <%= link_to 'Show', article %>
     <%= link_to 'Edit', edit_article_path(article) %>

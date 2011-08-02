@@ -9,9 +9,9 @@
     	<% end %>-->
     	
     	<% articles = get_narticles %>
-    	<%= link_to image_tag(articles.first.pic, :alt => articles.first.name, :class => "center work"), article_path(articles.first.id) %>
-    	<%= link_to image_tag(articles.second.pic, :alt => articles.second.name, :class => "left work"), article_path(articles.second.id) %>
-    	<%= link_to image_tag(articles.last.pic, :alt => articles.last.name, :class => "right work"), article_path(articles.last.id) %>
+    	<%= link_to image_tag(articles.first.pic, :alt => articles.first.name, :class => "center work"), work_path(articles.first.id) %>
+    	<%= link_to image_tag(articles.second.pic, :alt => articles.second.name, :class => "left work"), work_path(articles.second.id) %>
+    	<%= link_to image_tag(articles.last.pic, :alt => articles.last.name, :class => "right work"), work_path(articles.last.id) %>
     </div>
 </div>
 <%= render 'layouts/footer'%>

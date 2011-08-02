@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
-  # GET /articles
-  # GET /articles.xml
+  before_filter :authenticate, :except => [:index, :show]
   def index
     @articles = Article.all
 
@@ -78,6 +77,15 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(articles_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "foo" && password == "bar"
     end
   end
 end
