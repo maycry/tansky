@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
+  
   def index 
-    
     @title = "Портфолио"
 
     if params[:name]
@@ -89,11 +89,13 @@ class ArticlesController < ApplicationController
     end
   end
   
-  protected
+   private
 
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == "maycry" && password == "infernohell1988"
+    def authenticate
+      deny_access unless current_user
     end
-  end
+    
+    def deny_access
+    redirect_to root_path, :notice => "Fuck off"
+    end
 end

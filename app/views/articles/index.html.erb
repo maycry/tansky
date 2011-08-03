@@ -6,14 +6,17 @@
   <li>
   	<%= link_to image_tag(article.pic), work_path(article.name) %>
   	<%= article.name %>
+  	<% if current_user %>
     <%= link_to 'Show', article %>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
   </li>
 <% end %>
 </ul>
 <br />
-
+<% if current_user %>
 <%= link_to 'New Article', new_article_path %>
+<% end %>
 
 <%= render 'layouts/footer'%>
