@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
-  def index
-    @articles = Article.all
+  def index 
+    if params[:name]
+      @article = Article.where(:name => params[:name]).first
+    else
+      @articles = Article.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,7 +16,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.xml
   def show
-    @article = Article.find(params[:id])
+    @article = Article.where(:name => params[:name]).first
 
     respond_to do |format|
       format.html # show.html.erb
@@ -85,7 +89,7 @@ class ArticlesController < ApplicationController
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      username == "foo" && password == "bar"
+      username == "maycry" && password == "infernohell1988"
     end
   end
 end
