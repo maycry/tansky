@@ -1,5 +1,17 @@
 class ArticlesController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate, :except => [:index, :show, :show_process]
+  
+  def show_process
+    @article = Article.where(:name => params[:name]).first
+    
+    @title = @article.name
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @article }
+    end
+    
+  end
   
   def index 
     @title = "Портфолио"
@@ -88,6 +100,8 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+ 
   
    private
 

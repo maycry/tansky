@@ -1,14 +1,16 @@
 <%= render 'layouts/header'%>
 <div class="content">
-    <div class="site_link site_link_img"><a href="#">  <%= @article.link %></a></div>
+    <div class="site_link site_link_img"><a href="<%= @article.link %>"><%= @article.link %></a></div>
     <div class="content_header">
       <h1><%= @article.name.upcase %></h1>
     </div>
     <div class="content_typechooser">
+    	<% if @article.process !="" %>
       <ul>
         <li class="current">Описание</li>
-        <li><a href="#" class="process">Процесс</a></li>
+        <li><%= link_to "Процесс", proc_path, :class => "process" %></li>
       </ul>
+      <% end %>
     </div>
     <%= @article.describe.html_safe %>
   </div>
