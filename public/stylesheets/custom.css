@@ -109,7 +109,7 @@ img{
 #works{
 	overflow:hidden;
 	position:relative;
-	min-height:450px;
+	min-height:650px;
 	top:50px;
 }
 #works a{
@@ -124,10 +124,27 @@ img{
 	margin-left:-250px;
 }
 .right{
-	right:93%;
+	right:90%;
 }
 .left{
-	left:93%;
+	left:90%;
+}
+.out{
+	left:300%;
+}
+#next{
+	right:0;
+	position: absolute;
+	z-index: 2;
+	width: 10%;
+	height: 650px;
+}
+#prev{
+	left:0;
+	position: absolute;
+	z-index: 2;
+	width: 10%;
+	height: 650px;
 }
 
 
