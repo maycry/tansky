@@ -109,7 +109,7 @@ img{
 #works{
 	overflow:hidden;
 	position:relative;
-	min-height:650px;
+	min-height:600px;
 	top:50px;
 }
 #works a{
@@ -119,15 +119,20 @@ img{
 	background:none;
 	position:absolute;
 }
+#worktitle{
+	margin-top: 50px;
+}
 .center{
 	right:50%;
 	margin-right:-300px;
 }
 .right{
 	right:90%;
+	margin-top: 150px;
 }
 .left{
 	left:90%;
+	margin-top: 150px;
 }
 .out{
 	left:300%;
@@ -137,14 +142,16 @@ img{
 	position: absolute;
 	z-index: 2;
 	width: 13%;
-	height: 650px;
+	height: 600px;
+	cursor: pointer;
 }
 #prev{
 	left:0;
 	position: absolute;
 	z-index: 2;
 	width: 13%;
-	height: 650px;
+	height: 600px;
+	cursor: pointer;
 }
 
 
