@@ -120,8 +120,8 @@ img{
 	position:absolute;
 }
 .center{
-	left:50%;
-	margin-left:-250px;
+	right:50%;
+	margin-right:-300px;
 }
 .right{
 	right:90%;
