@@ -1,7 +1,7 @@
 <%= render 'layouts/header'%>
 
 
-<ul>
+<!--<ul>
 <% @articles.each do |article| %>
   <li>
   	<%= link_to image_tag(article.pic), work_path(article.name) %>
@@ -13,7 +13,18 @@
     <% end %>
   </li>
 <% end %>
-</ul>
+</ul>-->
+<div class="floats">
+<% @articles.each do |article| %>
+	<div class="pwork">
+		<div class="r" align="center">
+			<%= link_to image_tag(article.pic, :size => "250x250"), work_path(article.name), :style => "background:none;" %><br />
+			<%= link_to article.name, work_path(article.name) %><br />
+		</div>
+	    <div class="min"></div>
+	</div>
+<% end %>
+</div>
 <br />
 <% if current_user %>
 <%= link_to 'New Article', new_article_path %>

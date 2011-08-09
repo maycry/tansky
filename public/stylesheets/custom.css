@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-body,#wrapper,#works,ul,li,h2,h3,p{
+body,#wrapper,#works,ul,li,h2,h3,p,img{
 	margin:0;
 	padding:0;
 }
@@ -14,7 +14,7 @@ body{
 	margin:0 auto;
 	height:auto;
 	position: relative;
- 	 min-height: 100%;
+ 	min-height: 100%;
 }
 * html #wrapper {
   height: 100%;
@@ -53,9 +53,6 @@ cite{
 	line-height:1.3em;
 	margin:-6px 0 22px 20px;;
 	display:block;
-}
-img{
-	padding: 20px 0 32px;
 }
 
 
@@ -124,15 +121,15 @@ img{
 }
 .center{
 	right:50%;
-	margin-right:-300px;
+	margin-right:-250px;
 }
 .right{
 	right:90%;
-	margin-top: 150px;
+	margin-top: 125px;
 }
 .left{
 	left:90%;
-	margin-top: 150px;
+	margin-top: 125px;
 }
 .out{
 	left:300%;
@@ -211,6 +208,10 @@ img{
 }
 .annotate{
 	margin-top:50px;
+}
+
+.content img{
+	padding: 20px 0 32px;
 }
 
 

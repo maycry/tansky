@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+.floats
+{
+/* Компенсируем отступы между float-блоками, чтобы они занимали все доступное пространство */
+margin: -3em 0 0 -2em;
+padding-left: 5%;
+padding-top: 100px;
+
+/* Эти правила для IE */
+position: relative;
+display: inline-block;
+clear: both;
+}
+.floats:after
+{
+content: '';
+display: block;
+clear: both;
+}
+.floats .pwork
+{
+position: relative;
+float: left;
+
+/* Убираем удвоение отступов в IE */
+display: inline;
+
+/* Прячем все, что вдруг вылезло за наши ограничения */
+
+/* Отсупы между float-блоками */
+margin: 3em 1em 0 2.5em;
+
+/* Задаем минимальную ширину по картинке и тексту */
+width: 14em;
+min-width: 250px;
+}
+
+.floats .pwork .r
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+.floats .pwork .min
+{
+/* Задаем минимальную высоту по картинке */
+margin: 0 0 200px 0;
+
+/* Задаем минимальную высоту по тексту */
+height: 4em;
+
+/* Дублируем значение минимальной ширины по картинке для IE */
+width: 200px;
+}

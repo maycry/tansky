@@ -9,11 +9,14 @@ $(document).ready(function() {
 	var current_last = count;
 	var can_click = true;
 	var i = 0;
+	var img_size = 500;
+	var img_size2 = img_size/2;
+	var img_size4 = img_size2/2;
 	
 	$("#works a img").each(function(index) {
     	if (index != current) {
-    		$(this).css("width", "300px");
-    		$(this).css("height", "300px");
+    		$(this).css("width", img_size2);
+    		$(this).css("height", img_size2);
     	};
 	});	
 	
@@ -37,27 +40,27 @@ $(document).ready(function() {
     		$(this).removeClass("right");	
 		});		
 		
-		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : "150px"});
-		$("#works a img").eq(current).css({"right" : "50%", "left" : "", "margin-left" : "", "margin-right" : "-300px", "margin-top" : "0"});
-		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : "150px"});
-		$("#works a img").eq(current_inv).removeClass("out").css({"right" : "", "left" : "100%", "margin-top" : "150px"});
+		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : img_size4});
+		$("#works a img").eq(current).css({"right" : "50%", "left" : "", "margin-left" : "", "margin-right" : -img_size2, "margin-top" : "0"});
+		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : img_size4});
+		$("#works a img").eq(current_inv).removeClass("out").css({"right" : "", "left" : "100%", "margin-top" : img_size4});
 		
 		$("#works a img").eq(current_last).animate({
 			right: '+=10%'},
 			200);
 		$("#works a img").eq(current).animate({
 			right: '+=38%',
-			width: '-=300',
-			height: '-=300',
-			'margin-right': '+=300',
-			'margin-top': '+=150'},
+			width: '-='+img_size2,
+			height: '-='+img_size2,
+			'margin-right': '+='+img_size2,
+			'margin-top': '+='+img_size4},
 			550);
 		$("#works a img").eq(current_next).animate({
 			left: '-=40%',
-			width: '+=300',
-			height: '+=300',
-			'margin-left': '-=300',
-			'margin-top': '-=150'},
+			width: '+='+img_size2,
+			height: '+='+img_size2,
+			'margin-left': '-='+img_size2,
+			'margin-top': '-='+img_size4},
 			550);
 		$("#works a img").eq(current_inv).delay(200).animate({
 			left: '-=10%'},
@@ -70,7 +73,7 @@ $(document).ready(function() {
 			current = 0;
 		};
 		
-		//changeTitle(current);
+		changeTitle(current);
 		
 		current_next++;
 		if (current_next > count) {
@@ -101,24 +104,24 @@ $(document).ready(function() {
     		$(this).removeClass("right");
 		});		
 		
-		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : "150px"});
-		$("#works a img").eq(current).css({"right" : "", "left" : "50%", "margin-left" : "-300px", "margin-right" : "", "margin-top" : "0"});
-		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : "150px"});
-		$("#works a img").eq(current_invp).removeClass("out").css({"right" : "100%", "left" : "", "margin-top" : "150px"});
+		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : img_size4});
+		$("#works a img").eq(current).css({"right" : "", "left" : "50%", "margin-left" : -img_size2, "margin-right" : "", "margin-top" : "0"});
+		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : img_size4});
+		$("#works a img").eq(current_invp).removeClass("out").css({"right" : "100%", "left" : "", "margin-top" : img_size4});
 		
 		$("#works a img").eq(current_last).animate({
 			right: '-=40%',
-			width: '+=300',
-			height: '+=300',
-			'margin-right': '-=300',
-			'margin-top': '-=150'},
+			width: '+='+img_size2,
+			height: '+='+img_size2,
+			'margin-right': '-='+img_size2,
+			'margin-top': '-='+img_size4},
 			550);
 		$("#works a img").eq(current).animate({
 			left: '+=38%',
-			width: '-=300',
-			height: '-=300',
-			'margin-left': '+=300',
-			'margin-top': '+=150'},
+			width: '-='+img_size2,
+			height: '-='+img_size2,
+			'margin-left': '+='+img_size2,
+			'margin-top': '+='+img_size4},
 			550);
 		$("#works a img").eq(current_next).animate({
 			left: '+=10%'},
