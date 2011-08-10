@@ -20,6 +20,11 @@
 		<div class="r" align="center">
 			<%= link_to image_tag(article.pic, :size => "250x250"), work_path(article.name), :style => "background:none;" %><br />
 			<%= link_to article.name, work_path(article.name) %><br />
+			<% if current_user %>
+		    <%= link_to 'Show', article %>
+		    <%= link_to 'Edit', portfolio_work_path(article.name) %>
+		    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+		    <% end %>
 		</div>
 	    <div class="min"></div>
 	</div>
