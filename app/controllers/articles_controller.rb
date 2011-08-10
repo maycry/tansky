@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
     if params[:name]
       @article = Article.where(:name => params[:name]).first
     else
-      @articles = Article.all
+      @articles = Article.order("created_at DESC").all
     end
 
     respond_to do |format|
@@ -64,7 +64,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
+        format.html { redirect_to(work_path(@article.name), :notice => 'Article was successfully created.') }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
       else
         format.html { render :action => "new" }
@@ -92,11 +92,11 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.xml
   def destroy
-    @article = Article.find(params[:id])
+    @article = Article.where(:name => params[:name]).first
     @article.destroy
 
     respond_to do |format|
-      format.html { redirect_to(articles_url) }
+      format.html { redirect_to(portfolio_path) }
       format.xml  { head :ok }
     end
   end
