@@ -1,8 +1,12 @@
 <%= render 'layouts/header'%>
+<% if current_user %>
+<%= link_to 'Edit', portfolio_work_path(@article.name) %> |
+<%= link_to 'Back', articles_path %>
+<% end %>
 <div class="content">
     <div class="site_link site_link_img"><a href="<%= @article.link %>"><%= @article.link %></a></div>
     <div class="content_header">
-      <h1><%= @article.name.upcase %></h1>
+      <h1><%= @article.name.mb_chars.upcase.to_s %></h1>
     </div>
     <div class="content_typechooser">
     	<% if @article.process !="" %>
@@ -16,7 +20,7 @@
   </div>
 <p id="notice"><%= notice %></p>
 <% if current_user %>
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Edit', portfolio_work_path(@article.name) %> |
 <%= link_to 'Back', articles_path %>
 <% end %>
 <%= render 'layouts/footer'%>
