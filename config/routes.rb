@@ -7,10 +7,10 @@ Tansky::Application.routes.draw do
 
   match 'about',   :to => 'pages#about'
   match 'portfolio' => "Articles#index"
-  match 'portfolio/:name' => "Articles#show", :as => "work"
-  match 'portfolio/:name/edit' => "Articles#edit", :as => "portfolio_work"
-  match 'portfolio/:name/destroy' => "Articles#destroy", :as => "destroy_work"
-  match 'portfolio/:name/process' => "Articles#show_process", :as => "proc" 
+  match 'portfolio/:alias' => "Articles#show", :as => "work"
+  match 'portfolio/:alias/edit' => "Articles#edit", :as => "portfolio_work"
+  match 'portfolio/:alias/destroy' => "Articles#destroy", :as => "destroy_work"
+  match 'portfolio/:alias/process' => "Articles#show_process", :as => "proc" 
   root :to => 'pages#home'
   
   get "pages/home"

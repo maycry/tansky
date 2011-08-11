@@ -11,13 +11,13 @@
     	<div id="prev"></div>
     	
     	<% articles = get_narticles %>
-    	<%= link_to image_tag(articles.first.pic, :alt => articles.first.name, :class => "center work"), work_path(articles.first.name) %>
-    	<%= link_to image_tag(articles.second.pic, :alt => articles.second.name, :class => "left work"), work_path(articles.second.name) %>
-    	<%= link_to image_tag(articles[2].pic, :alt => articles[2].name, :class => "out work"), work_path(articles[2].name) %>
-    	<%= link_to image_tag(articles.last.pic, :alt => articles.last.name, :class => "right work"), work_path(articles.last.name) %>
+    	<%= link_to image_tag(articles.first.pic, :alt => articles.first.name, :class => "center work"), work_path(articles.first.alias) %>
+    	<%= link_to image_tag(articles.second.pic, :alt => articles.second.name, :class => "left work"), work_path(articles.second.alias) %>
+    	<%= link_to image_tag(articles[2].pic, :alt => articles[2].name, :class => "out work"), work_path(articles[2].alias) %>
+    	<%= link_to image_tag(articles.last.pic, :alt => articles.last.name, :class => "right work"), work_path(articles.last.alias) %>
     	
     </div>
-    <div id="worktitle" align="center"><%= link_to articles.first.name, work_path(articles.first.name) %></div>
+    <div id="worktitle" align="center"><%= link_to articles.first.name, work_path(articles.first.alias) %></div>
     
 </div>
 <%= render 'layouts/footer'%>

@@ -20,7 +20,7 @@
   </div>
 <p id="notice"><%= notice %></p>
 <% if current_user %>
-<%= link_to 'Edit', portfolio_work_path(@article.name) %> |
+<%= link_to 'Edit', portfolio_work_path(@article.alias) %> |
 <%= link_to 'Back', articles_path %>
 <% end %>
 <%= render 'layouts/footer'%>

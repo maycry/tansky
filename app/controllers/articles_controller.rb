@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_filter :authenticate, :except => [:index, :show, :show_process]
   
   def show_process
-    @article = Article.where(:name => params[:name]).first
+    @article = Article.where(:alias => params[:alias]).first
     
     @title = @article.name
 
@@ -16,8 +16,8 @@ class ArticlesController < ApplicationController
   def index 
     @title = "Портфолио"
 
-    if params[:name]
-      @article = Article.where(:name => params[:name]).first
+    if params[:alias]
+      @article = Article.where(:alias => params[:alias]).first
     else
       @articles = Article.order("created_at DESC").all
     end
@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.xml
   def show
-    @article = Article.where(:name => params[:name]).first
+    @article = Article.where(:alias => params[:alias]).first
     
     @title = @article.name
 
@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = Article.where(:name => params[:name]).first
+    @article = Article.where(:alias => params[:alias]).first
   end
 
   # POST /articles
@@ -64,7 +64,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to(work_path(@article.name), :notice => 'Article was successfully created.') }
+        format.html { redirect_to(work_path(@article.alias), :notice => 'Article was successfully created.') }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
       else
         format.html { render :action => "new" }
@@ -80,7 +80,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to(work_path(@article.name), :notice => 'Article was successfully updated.') }
+        format.html { redirect_to(work_path(@article.alias), :notice => 'Article was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -92,7 +92,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.xml
   def destroy
-    @article = Article.where(:name => params[:name]).first
+    @article = Article.where(:alias => params[:alias]).first
     @article.destroy
 
     respond_to do |format|

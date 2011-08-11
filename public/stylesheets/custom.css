@@ -67,6 +67,14 @@ cite{
 	font-weight:bold;
 	margin-bottom:1px;
 }
+#header ul li span{ 
+	letter-spacing:0;
+	font-size:13px;
+	font-weight:normal;
+	margin-bottom:1px;
+	border:#666666 solid 2px;
+	border-radius: 2px;
+}
 .webdes{
 	font-size:0.813em;
 	letter-spacing:0;
@@ -101,13 +109,14 @@ cite{
 }
 
 
+
 /*Работы*/
 
 #works{
 	overflow:hidden;
 	position:relative;
-	min-height:600px;
-	top:50px;
+	min-height:500px;
+	top:10px;
 }
 #works a{
 	background:none;
@@ -117,7 +126,7 @@ cite{
 	position:absolute;
 }
 #worktitle{
-	margin-top: 50px;
+	margin-top: 10px
 }
 .center{
 	right:50%;
