@@ -1,17 +1,15 @@
 module ApplicationHelper
-  def menu(item_name)
+  def menu(item_name, item_alias)
     current_url = request.url
-    url_parts = current_url.split("/");
+    url_parts = current_url.split("/")
+    url_parts.slice!(0..2);
     parts_count = url_parts.size
     
-    return if url_parts[3] != 'portfolio'
-    
-    if parts_count == 4
-      return "<li><span>#{item_name}</span></li>".html_safe
-    elsif parts_count == 5
-      return "<li>#{link_to item_name, portfolio_path, :class => "active"}<span>#{@article.name}</span></li>".html_safe
+    if url_parts[0] == item_alias.delete("/")
+      return "<li><span>#{item_name}</span></li>".html_safe  if parts_count == 1
+      return "<li>#{link_to item_name, item_alias, :class => "active"}<span>#{@article.name}</span></li>".html_safe if parts_count == 2
     else
-      return "<li>#{link_to item_name, portfolio_path}</li>".html_safe
+      return "<li>#{link_to item_name, item_alias}</li>".html_safe
     end
   end
   

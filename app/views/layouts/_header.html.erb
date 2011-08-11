@@ -7,8 +7,8 @@
       <span class="webdes">веб-дизайнер</span></div>
     <%= mail_to "tansky@tansky.com.ua", "tansky@tansky.com.ua", :id => "mailto"  %>
     <ul>
-      <%= menu("ПОРТФОЛИО") %>
-      <li><%= link_to "ОБО МНЕ", about_path %></li>
+      <%= menu("ПОРТФОЛИО", portfolio_path) %>
+      <%= menu("ОБО МНЕ", about_path) %>
       <li><a href="#">ЭКСПРИМЕНТЫ</a></li>
       <li><a href="#">ПУТЕШЕСТВИЯ</a></li>
       
