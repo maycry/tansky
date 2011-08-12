@@ -34,6 +34,8 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.where(:alias => params[:alias]).first
     
+    @other_articles = Article.order("created_at DESC").all
+    
     @title = @article.name
 
     respond_to do |format|

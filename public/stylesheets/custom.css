@@ -170,7 +170,16 @@ cite{
 	height: 600px;
 	cursor: pointer;
 }
-
+#other_works{
+	width: 100%;
+	margin-top:73px;
+	margin-left: 20.5%;
+}
+#other_works_line{
+	width: 100px;
+	height: 3px;
+	background-color: #000;
+}
 
 /*Контент*/
 

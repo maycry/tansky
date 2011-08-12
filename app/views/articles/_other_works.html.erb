@@ -1,0 +1,13 @@
+<div id="other_works">
+	<div id="other_works_line"></div>
+	<div class="other">
+	<% @other_articles.each do |article| %>
+		<div class="owork">
+			<div class="or <%= "active" if @article == article %>">
+				<%= link_to image_tag(article.pic, :size => '64x64'), work_path(article.alias), :style => "background:none;" %>
+			</div>
+		    <div class="omin"></div>
+		</div>
+	<% end %>
+	</div>
+</div>

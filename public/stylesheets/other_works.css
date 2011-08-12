@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+.other
+{
+padding-top: 20px;
+margin-left: 94px;
+
+/* Эти правила для IE */
+position: relative;
+display: inline-block;
+clear: both;
+}
+.other:after
+{
+content: '';
+display: block;
+clear: both;
+}
+.other .owork
+{
+position: relative;
+float: left;
+
+/* Убираем удвоение отступов в IE */
+display: inline;
+margin-left: -100px;
+
+/* Задаем минимальную ширину по картинке и тексту */
+width: 200px;
+min-width: 200px;
+}
+.other .active
+{
+	 -khtml-opacity:.20;
+	 -moz-opacity:.20;
+	 -ms-filter:”alpha(opacity=20)”;
+	 filter:alpha(opacity=20);
+	 opacity:.20;
+}
+
+.other .owork .or
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+.other .owork .omin
+{
+/* Задаем минимальную высоту по картинке */
+margin: 0 0 100px 0;
+
+/* Дублируем значение минимальной ширины по картинке для IE */
+width: 100px;
+}
