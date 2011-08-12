@@ -41,10 +41,18 @@ min-width: 200px;
 
 .other .owork .or
 {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.other .owork .or a:hover
+{
+	-khtml-opacity:.80;
+	 -moz-opacity:.80;
+	 -ms-filter:”alpha(opacity=80)”;
+	 filter:alpha(opacity=80);
+	 opacity:.80;
 }
 .other .owork .omin
 {

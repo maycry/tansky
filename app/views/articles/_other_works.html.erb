@@ -3,8 +3,13 @@
 	<div class="other">
 	<% @other_articles.each do |article| %>
 		<div class="owork">
-			<div class="or <%= "active" if @article == article %>">
+			
+			<div class="or">
+				<% if @article != article %>
 				<%= link_to image_tag(article.pic, :size => '64x64'), work_path(article.alias), :style => "background:none;" %>
+				<% else %>
+				<%= image_tag article.pic, :size => '64x64', :class => "active" %>
+				<% end %>
 			</div>
 		    <div class="omin"></div>
 		</div>
