@@ -1,3 +1,4 @@
+#encoding: utf-8
 module ApplicationHelper
   def menu(item_name, item_alias)
     current_url = request.url
