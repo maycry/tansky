@@ -181,6 +181,21 @@ cite{
 	background-color: #000;
 }
 
+
+/*Работы*/
+#process_content{
+	width:38.9%;
+	margin-left: 20.5%;
+}
+#process_content img{
+	display: block;
+	margin: 10px 0 32px 0;
+	padding: 0;
+}
+#process_content p{
+	margin-top: 20px;
+}
+
 /*Контент*/
 
 .content{
@@ -240,9 +255,25 @@ cite{
 }
 
 .content img{
-	padding: 20px 0 32px;
+	padding: 20px 0 0px;
 }
-
+.podpis{
+	font-style:italic;
+	float:right;
+	font-size: 0.875em;
+	margin-bottom:32px;
+	text-align: right;
+	margin-right: 20px;
+}
+.img_right{
+	float:right;
+	margin:20px 0 0 20px;
+}
+.brokbiznes_circles{
+	position:absolute;
+	display:block;
+	margin-top:20px;
+}
 
 /*Футер*/
 

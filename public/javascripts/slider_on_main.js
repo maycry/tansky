@@ -42,21 +42,21 @@ $(document).ready(function() {
 		
 		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : img_size4});
 		$("#works a img").eq(current).css({"right" : "50%", "left" : "", "margin-left" : "", "margin-right" : -img_size2, "margin-top" : "0"});
-		$("#works a img").eq(current_next).css({"right" : "", "left" : "88%", "margin-top" : img_size4});
+		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : img_size4});
 		$("#works a img").eq(current_inv).removeClass("out").css({"right" : "", "left" : "100%", "margin-top" : img_size4});
 		
 		$("#works a img").eq(current_last).animate({
 			right: '+=10%'},
 			200);
 		$("#works a img").eq(current).animate({
-			right: '+=38%',
+			right: '+=40%',
 			width: '-='+img_size2,
 			height: '-='+img_size2,
 			'margin-right': '+='+img_size2,
 			'margin-top': '+='+img_size4},
 			550);
 		$("#works a img").eq(current_next).animate({
-			left: '-=38%',
+			left: '-=40%',
 			width: '+='+img_size2,
 			height: '+='+img_size2,
 			'margin-left': '-='+img_size2,
@@ -104,20 +104,20 @@ $(document).ready(function() {
     		$(this).removeClass("right");
 		});		
 		
-		$("#works a img").eq(current_last).css({"right" : "88%", "left" : "", "margin-top" : img_size4});
+		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : img_size4});
 		$("#works a img").eq(current).css({"right" : "", "left" : "50%", "margin-left" : -img_size2, "margin-right" : "", "margin-top" : "0"});
 		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : img_size4});
 		$("#works a img").eq(current_invp).removeClass("out").css({"right" : "100%", "left" : "", "margin-top" : img_size4});
 		
 		$("#works a img").eq(current_last).animate({
-			right: '-=38%',
+			right: '-=40%',
 			width: '+='+img_size2,
 			height: '+='+img_size2,
 			'margin-right': '-='+img_size2,
 			'margin-top': '-='+img_size4},
 			550);
 		$("#works a img").eq(current).animate({
-			left: '+=38%',
+			left: '+=40%',
 			width: '-='+img_size2,
 			height: '-='+img_size2,
 			'margin-left': '+='+img_size2,

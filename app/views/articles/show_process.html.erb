@@ -1,6 +1,10 @@
 <%= render 'layouts/header'%>
+<% if current_user %>
+<%= link_to 'Edit', portfolio_work_path(@article.alias) %> |
+<%= link_to 'Back', articles_path %>
+<% end %>
 <div class="content">
-    <div class="site_link site_link_img"><a href="#">  <%= @article.link %></a></div>
+    <div class="site_link site_link_img"><%= link_to @article.link, "http://#{@article.link}"   %></a></div>
     <div class="content_header">
       <h1><%= @article.name.upcase %></h1>
     </div>
@@ -15,4 +19,8 @@
     <%= @article.process.html_safe %>
   </div>
 <p id="notice"><%= notice %></p>
+<% if current_user %>
+<%= link_to 'Edit', portfolio_work_path(@article.alias) %> |
+<%= link_to 'Back', articles_path %>
+<% end %>
 <%= render 'layouts/footer'%>
