@@ -285,7 +285,7 @@ cite{
 .bouties_stack{
 	width:100%;
 	height:auto;
-	margin-bottom:22px;
+	margin-bottom:30px;
 	clear:both;
 }
 .bouties_podpis{
@@ -335,7 +335,7 @@ cite{
 .bouties .bouty .min{
 	margin: 4px 0 70px 0;
 	width: 70px;
-	height:10px;
+	height:30px;
 }
 #about_me{
 	width:24%;
@@ -374,7 +374,7 @@ cite{
 	-webkit-transform: rotate(-90deg); 
 	-moz-transform: rotate(-90deg);
 	width:180px;
-	margin-top: 100px;
+	margin-top: 50px;
 	padding-left:2.1%;
   	height: 2.5em;
 	float:right;
