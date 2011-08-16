@@ -1,0 +1,44 @@
+<%= render 'layouts/header'%>
+<div class="content">
+  <div id="about_abouty">
+    <div class="bouties_stack">
+      <div class="bouties_podpis">ИСПОЛЬЗУЮ</div>
+      <div class="bouties">
+      	<% @bouties_use.each do |bouty| %>
+        <div class="bouty">
+          <div class="r"> <%= image_tag bouty.pic, :alt => bouty.name %> </div>
+          <div class="min">
+          	<% if current_user %>
+          	<%= link_to 'Edit', edit_bouty_path(bouty) %>
+    		<%= link_to 'Destroy', bouty, :confirm => 'Are you sure?', :method => :delete %>
+    		<% end %>
+    	  </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="bouties_stack">
+      <div class="bouties_podpis">ЧИТАЮ</div>
+      <div class="bouties">
+        <% @bouties_read.each do |bouty| %>
+        <div class="bouty">
+        	<% if current_user %>
+          	<%= link_to 'Edit', edit_bouty_path(bouty) %>
+    		<%= link_to 'Destroy', bouty, :confirm => 'Are you sure?', :method => :delete %>
+    		<% end %>
+          <div class="r"> <%= image_tag bouty.pic, :alt => bouty.name, :class => "book" %> </div>
+          <div class="min"></div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div id="about_me">
+    <%= image_tag "../images/bouty/ava.gif", :size => "64x64" %>
+    <p>Танский Юрий, дизайнер, специализируюсь на сайтах и интерфейсах. Мне 23 года Родился в Чернигове, сейчас живу в Киеве</p></div>
+    
+  </div>
+</div>
+<% if current_user %>
+<%= link_to 'New Bouty', new_bouty_path %>
+<% end %>
+<%= render 'layouts/footer'%>

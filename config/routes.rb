@@ -1,11 +1,13 @@
 Tansky::Application.routes.draw do
+  
   get "log_in" => "sessions#new", :as => "log_in" 
   get "log_out" => "sessions#destroy", :as => "log_out"
 
   resources :articles
   resources :sessions
+  resources :bouties
 
-  match 'about',   :to => 'pages#about'
+  match 'about'=> "Bouties#index"
   match 'portfolio' => "Articles#index"
   match 'portfolio/:alias' => "Articles#show", :as => "work"
   match 'portfolio/:alias/edit' => "Articles#edit", :as => "portfolio_work"
@@ -14,7 +16,6 @@ Tansky::Application.routes.draw do
   root :to => 'pages#home'
   
   get "pages/home"
-  get "pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

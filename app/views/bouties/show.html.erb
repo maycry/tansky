@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @bouty.name %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <%= @bouty.pic %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @bouty.description %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @bouty.link %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @bouty.bouty_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_bouty_path(@bouty) %> |
+<%= link_to 'Back', bouties_path %>

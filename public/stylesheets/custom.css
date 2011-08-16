@@ -182,7 +182,7 @@ cite{
 }
 
 
-/*Работы*/
+/*Процесс*/
 #process_content{
 	width:38.9%;
 	margin-left: 20.5%;
@@ -274,6 +274,84 @@ cite{
 	display:block;
 	margin-top:20px;
 }
+
+
+
+/*Обо мне*/
+
+#about_abouty{
+	width:100%;
+}
+.bouties_stack{
+	width:100%;
+	height:auto;
+	margin-bottom:22px;
+	clear:both;
+}
+.bouties_podpis{
+	width:20.5%;
+	float:left;
+	height:100px;
+	text-align:right;
+	font-size:0.813em;
+	letter-spacing:0.08em;
+}
+.bouties{
+	width:47%;
+	margin-left:20.5%;
+	position: relative;
+}
+.bouties:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.bouties .bouty{
+	position: relative;
+	float: left;
+	display: inline;
+	overflow: hidden;
+	width: 100px;
+	min-width: 70px;
+	
+}
+.bouties .bouty .r{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-left:20px;
+}
+.bouties .bouty .r img{
+	padding:0;
+}
+.book{
+	margin:1px 0 0 0;
+	box-shadow: 1 1 2px rgba(0,0,0,0.3); /* Параметры тени */
+    box-shadow: 1 1 2px rgba(0,0,0,0.3); /* Параметры тени */
+    -moz-box-shadow: 1 1 12px rgba(0,0,0,0.3); /* Для Firefox */
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Для Safari и Chrome */
+}
+.bouties .bouty .min{
+	margin: 4px 0 70px 0;
+	width: 70px;
+	height:10px;
+}
+#about_me{
+	width:24%;
+	position:absolute;
+	top:179px;
+	left:68.3%;
+}
+#about_ava{
+	margin:-64px 0 0 0;
+	padding:0;
+}
+#about_me p{
+	margin:5px 0 0 0;
+	padding:0;
+}
+
 
 /*Футер*/
 

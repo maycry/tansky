@@ -103,16 +103,5 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
- 
-  
-   private
 
-    def authenticate
-      deny_access unless current_user
-    end
-    
-    def deny_access
-    redirect_to root_path, :notice => "Fuck off"
-    end
 end
