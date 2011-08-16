@@ -12,6 +12,8 @@ $(document).ready(function() {
 	var img_size = 500;
 	var img_size2 = img_size/2;
 	var img_size4 = img_size2/2;
+	var on_left =false;
+	var on_right =false;
 	
 	$("#works a img").each(function(index) {
     	if (index != current) {
@@ -42,7 +44,7 @@ $(document).ready(function() {
 		
 		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : img_size4});
 		$("#works a img").eq(current).css({"right" : "50%", "left" : "", "margin-left" : "", "margin-right" : -img_size2, "margin-top" : "0"});
-		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : img_size4});
+		$("#works a img").eq(current_next).css({"right" : "", "left" : "88%", "margin-top" : img_size4});
 		$("#works a img").eq(current_inv).removeClass("out").css({"right" : "", "left" : "100%", "margin-top" : img_size4});
 		
 		$("#works a img").eq(current_last).animate({
@@ -56,14 +58,16 @@ $(document).ready(function() {
 			'margin-top': '+='+img_size4},
 			550);
 		$("#works a img").eq(current_next).animate({
-			left: '-=40%',
+			left: '-=38%',
 			width: '+='+img_size2,
 			height: '+='+img_size2,
 			'margin-left': '-='+img_size2,
 			'margin-top': '-='+img_size4},
 			550);
+			var shift = 10
+			if (on_right) {shift=12;};
 		$("#works a img").eq(current_inv).delay(200).animate({
-			left: '-=10%'},
+			left: '-='+shift+'%'},
 			200);
 			
 		window.setTimeout(denyClick, 550);
@@ -104,13 +108,13 @@ $(document).ready(function() {
     		$(this).removeClass("right");
 		});		
 		
-		$("#works a img").eq(current_last).css({"right" : "90%", "left" : "", "margin-top" : img_size4});
+		$("#works a img").eq(current_last).css({"right" : "88%", "left" : "", "margin-top" : img_size4});
 		$("#works a img").eq(current).css({"right" : "", "left" : "50%", "margin-left" : -img_size2, "margin-right" : "", "margin-top" : "0"});
 		$("#works a img").eq(current_next).css({"right" : "", "left" : "90%", "margin-top" : img_size4});
 		$("#works a img").eq(current_invp).removeClass("out").css({"right" : "100%", "left" : "", "margin-top" : img_size4});
 		
 		$("#works a img").eq(current_last).animate({
-			right: '-=40%',
+			right: '-=38%',
 			width: '+='+img_size2,
 			height: '+='+img_size2,
 			'margin-right': '-='+img_size2,
@@ -126,8 +130,10 @@ $(document).ready(function() {
 		$("#works a img").eq(current_next).animate({
 			left: '+=10%'},
 			200);
+			var shift = 10
+			if (on_left) {shift=12;};
 		$("#works a img").eq(current_invp).delay(200).animate({
-			right: '-=10%'},
+			right: '-='+shift+'%'},
 			200);
 			
 		window.setTimeout(denyClick, 550);
@@ -159,21 +165,25 @@ $(document).ready(function() {
 	}
 
 	function mOverLeft(){
+		on_left=true;
 		$("#works a img").eq(current_last).animate({
 			right: '-=2%'},
 			100);
 	}
 	function mLeaveLeft(){
+		on_left=false;
 		$("#works a img").eq(current_last).animate({
 			right: '+=2%'},
 			100);
 	}
 	function mOverRight(){
+		on_right= true;
 		$("#works a img").eq(current_next).animate({
 			left: '-=2%'},
 			100);
 	}
 	function mLeaveRight(){
+		on_right=false;
 		$("#works a img").eq(current_next).animate({
 			left: '+=2%'},
 			100);
