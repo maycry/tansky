@@ -47,7 +47,7 @@ class BoutiesController < ApplicationController
 
     respond_to do |format|
       if @bouty.save
-        format.html { redirect_to(@bouty, :notice => 'Bouty was successfully created.') }
+        format.html { redirect_to(about_path, :notice => 'Bouty was successfully created.') }
         format.xml  { render :xml => @bouty, :status => :created, :location => @bouty }
       else
         format.html { render :action => "new" }
@@ -63,7 +63,7 @@ class BoutiesController < ApplicationController
 
     respond_to do |format|
       if @bouty.update_attributes(params[:bouty])
-        format.html { redirect_to(@bouty, :notice => 'Bouty was successfully updated.') }
+        format.html { redirect_to(about_path, :notice => 'Bouty was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

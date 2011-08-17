@@ -221,12 +221,16 @@ cite{
 	padding:0;
 	margin-right:3px;
 }
-.process{
-	background:url(../images/process.png) no-repeat left bottom;
+a.process {
+	background:url(../images/controls.png) no-repeat;
 	padding:3px 24px 4px 5px;
 }
- a.process:hover{
-	background:url(../images/process_hover.png) no-repeat left;
+a.process:hover{
+	background:url(../images/controls.png) no-repeat 0 -24px;
+	-o-background-size: auto auto;
+	-moz-background-size: auto auto;
+	-webkit-background-size: auto auto;
+	background-size: auto auto;
 }
 .current{
 	color:#7d7d7d;
