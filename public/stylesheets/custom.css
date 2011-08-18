@@ -386,6 +386,19 @@ a.process:hover{
 }
 
 
+/*Эксперименты*/
+
+#experiments{
+	overflow:hidden;
+	position: relative;
+	min-height:1000px;
+	top:150px;
+}
+.tim{
+	position: absolute;
+}
+
+
 /*Градиент*/
 
 a:hover,#logo a:hover {

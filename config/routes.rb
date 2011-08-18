@@ -1,5 +1,7 @@
 Tansky::Application.routes.draw do
   
+  get "experiments/index"
+
   get "log_in" => "sessions#new", :as => "log_in" 
   get "log_out" => "sessions#destroy", :as => "log_out"
 
@@ -8,6 +10,7 @@ Tansky::Application.routes.draw do
   resources :bouties
 
   match 'about'=> "Bouties#index"
+  match 'experiments'=> "Experiments#index"
   match 'portfolio' => "Articles#index"
   match 'portfolio/:alias' => "Articles#show", :as => "work"
   match 'portfolio/:alias/edit' => "Articles#edit", :as => "portfolio_work"
