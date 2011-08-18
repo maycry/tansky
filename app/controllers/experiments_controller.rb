@@ -13,16 +13,21 @@ class ExperimentsController < ApplicationController
       @images_stack = ""
       
       @images.each do |image|
-        imageWidth = JPEG.new(image).width/2
-        imageHeight = JPEG.new(image).height/2
+        imageWidth = JPEG.new(image).width/3
+        imageHeight = JPEG.new(image).height/3
         image.slice!("public/")
-        @images_stack += "<div class='tim' style='left:#{x}%; top:#{y}px'><img src=#{image} style='width:#{imageWidth}px; height:#{imageHeight}px'></div>"
-        if x>60
-          x=rand(5)
-          y+=200+rand(50)-rand(50)
+        if x<70
+          @images_stack += "<img src=#{image} style='width:#{imageWidth}px; height:#{imageHeight}px; left:#{x}%; top:#{y}px'>"
         else
-          x+=rand(20)+20
-          y+=rand(50)
+          @images_stack += "<img src=#{image} style='width:#{imageWidth}px; height:#{imageHeight}px; right:#{(100-x)<0 ? rand(5) : 100-x}%; top:#{y}px'>"
+        end
+        
+        if x>70
+          x=rand(10)
+          y+=250+rand(50)-rand(50)
+        else
+          x+=rand(10)+40
+          y+=rand(25)-rand(25)
         end
       end
       

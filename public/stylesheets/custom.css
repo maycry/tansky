@@ -389,13 +389,13 @@ a.process:hover{
 /*Эксперименты*/
 
 #experiments{
-	overflow:hidden;
 	position: relative;
-	min-height:1000px;
+	height:1000px;
 	top:150px;
 }
-.tim{
+#experiments img{
 	position: absolute;
+	cursor: pointer;
 }
 
 
