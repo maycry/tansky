@@ -9,39 +9,51 @@ $(document).ready(function(){
 	var open = false;
 	var w = 0;
 	var h = 0;
-	var $img = $('#experiments img');
+	var time = 90;
+	var times = 70;
+	
     $("#experiments img").hover(mover,mleave);	
    	
-   	$img.load(function(){
-    	$(this).removeAttr("width")
-           	.removeAttr("height")
-           	.css({ width: "", height: "" });
- 
-    	var width  = $(this).width();
-    	var height = $(this).height();
-    	$(this).css({ width: width/3, height: height/3 });
-	});
-   	
    	function mover(){
-		$(this).css("z-index",z);
-		$(this).animate({
-			width:'+=10',
-			height:'+=10'},50);
-		z++;
+   		if (!$(this).hasClass("opened")) {
+			$(this).css("z-index",z);
+			$(this).animate({
+				width:'+=10',
+				height:'+=10'},times);
+			z++;
+		}
 	}
 	function mleave(){
-		$(this).animate({
-			width:'-=10',
-			height:'-=10'},50);
+		if (!$(this).hasClass("opened")) {
+			$(this).animate({
+				width:'-=10',
+				height:'-=10'},times);
+			}
 	}
 	
 	$("#experiments img").click(function() {
-		w = $(this).width()*2-10;
-		h = $(this).height()*2-10;
-		$(this).animate({
-		width:'+='+w,
-		height:'+='+h},50);
-		open = true;
+		if ($(this).hasClass("opened")) {
+			w = $(this).width()/3;
+			h = $(this).height()/3;
+			$(this).animate({
+			width:w,
+			height:h},time);
+			open = false;
+			$(this).removeClass("opened");
+		} else {
+			$(this).removeAttr("width")
+           	.removeAttr("height")
+           	.css({ width: "", height: "" });
+ 
+	    	var width  = $(this).width();
+	    	var height = $(this).height();
+	    	$(this).css({ width: width/3, height: height/3 });
+
+			$(this).animate({
+			width:width,
+			height:height},time);
+			open = true;
+			$(this).addClass("opened");		
+		}	
     });
-    
 });
