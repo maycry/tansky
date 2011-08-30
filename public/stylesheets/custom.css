@@ -80,7 +80,6 @@ cite{
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 }
-@-moz-document url-prefix(){#header ul li span{padding:0px 4px 1px 4px;}}
 #header ul li a{ 
 	margin-right: 2px;
 }
@@ -292,7 +291,9 @@ a.process:hover{
 	display:block;
 	margin-top:20px;
 }
-
+.fluid_img{
+	max-width: 100%;
+}
 
 
 /*Обо мне*/
@@ -463,7 +464,7 @@ a:hover,#logo a:hover {
 	}
 .site_link a{
 	/* Legacy browsers */
-	background: #46c1e4 (../images/gradient-bg1.png) repeat-y left;
+	background: #46c1e4 url(../images/gradient-bg1.png) repeat-y left;
 	-o-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
@@ -477,7 +478,7 @@ a:hover,#logo a:hover {
 	@media all and (min-width: 0px) {
 		.site_link a {
 			/* Opera */
-			background: #46c1e4 (../images/gradient-bg1.svg);
+			background: #46c1e4 url(../images/gradient-bg1.svg);
 			/* Recent browsers */
 			background-image: -webkit-gradient(
 				linear,
