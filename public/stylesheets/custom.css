@@ -27,9 +27,12 @@ a{
 	text-decoration:none;
 	color:#fff;
 	background:#000;
-	padding:1px 4px 2px 4px;
+	padding:1px 4px 2px;
 	border-radius:2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
+@-moz-document url-prefix(){a {padding:0px 4px 1px;}}
 h1{
 	font-size:1.25em;
 	color:#000;
@@ -62,18 +65,22 @@ cite{
 }
 #header ul li{
 	letter-spacing:1px;
-	font-size:13px;
+	font-size:0.79em;
 	font-weight:bold;
 	margin-bottom:1px;
 }
+
 #header ul li span{ 
 	letter-spacing:0;
-	font-size:13px;
 	margin-bottom:1px;
 	background-color:#e1e1e1;
 	padding:1px 4px 2px 4px;
 	cursor: default ;
+	border-radius:2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
+@-moz-document url-prefix(){#header ul li span{padding:0px 4px 1px 4px;}}
 #header ul li a{ 
 	margin-right: 2px;
 }
@@ -101,6 +108,8 @@ cite{
 	background:none;
 	padding:0;
 	border-radius:0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
 }
 #logo a:hover {
 	text-decoration:none;
@@ -109,6 +118,8 @@ cite{
 	padding:1px 4px 2px 4px;
 	margin-left:-4px;
 	border-radius:2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	
 }
 #mailto{
@@ -161,7 +172,9 @@ cite{
 	width: 13%;
 	height: 600px;
 	cursor: pointer;
+	background: none;
 }
+
 #prev{
 	left:0;
 	position: absolute;
@@ -225,6 +238,7 @@ a.process {
 	background:url(../images/controls.png) no-repeat;
 	padding:3px 24px 4px 5px;
 }
+@-moz-document url-prefix(){a.process{padding:3px 24px 3px 5px;}}
 a.process:hover{
 	background:url(../images/controls.png) no-repeat 0 -24px;
 	-o-background-size: auto auto;
@@ -383,7 +397,11 @@ a.process:hover{
 	padding-left:2.1%;
   	height: 2.5em;
 	float:right;
-
+}
+@-moz-document url-prefix(){
+	#footer {
+	padding:3px 24px 3px 5px;
+	}
 }
 
 

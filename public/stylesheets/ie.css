@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+#next, #prev { 
+	background-color: #fff;
+	filter: alpha ( opacity = 0);
+}
+
+#footer{
+	zoom:1;
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	background-color:white;
+	padding: 165px 0 200px 0;
+	margin: 0 0 100px 100px;
+	position:static;
+}
+#iefooter{
+	overflow: hidden;
+	margin-right:0px;
+	padding-right:2%;
+	height: 200px;
+}
+#header ul li{
+	font-size:0.79em;
+}
