@@ -39,6 +39,9 @@ a{
 	-moz-border-radius: 2px;
 }
 @-moz-document url-prefix(){a {padding:0px 4px 1px;}}
+body:first-of-type a{
+	padding:3px 4px 2px;
+}
 h1{
 	font-size:1.25em;
 	color:#000;
@@ -74,6 +77,9 @@ cite{
 	font-size:0.79em;
 	font-weight:bold;
 	margin-bottom:1px;
+}
+body:first-of-type #header ul li{
+	font-weight:normal;
 }
 
 #header ul li span{ 
@@ -154,6 +160,9 @@ cite{
 }
 #worktitle{
 	margin-top: 10px
+}
+body:first-of-type #worktitle a{
+	font-size:0.915em;
 }
 .center{
 	right:50%;
@@ -242,6 +251,9 @@ cite{
 a.process {
 	background:url(../images/controls.png) no-repeat;
 	padding:3px 24px 4px 5px;
+}
+body:first-of-type a.process{
+	padding:5px 24px 4px 5px;
 }
 @-moz-document url-prefix(){a.process{padding:3px 24px 3px 5px;}}
 a.process:hover{
@@ -393,24 +405,27 @@ a.process:hover{
 	width:180px;
 }*/
 #footer{
+	padding:0 0 0 2.1%;
+	margin:50px -80px 0 0;
 	position:relative;
-	margin-right:-80px;
 	font-size:0.813em;
 	color:#999;
 	-webkit-transform: rotate(-90deg); 
 	-moz-transform: rotate(-90deg);
 	width:180px;
-	margin-top: 50px;
-	padding-left:2.1%;
   	height: 2.5em;
 	float:right;
 }
 @-moz-document url-prefix(){
 	#footer {
-	padding:3px 24px 3px 5px;
+		padding:3px 24px 3px 5px;
+		margin-bottom:120px;
 	}
 }
-
+body:first-of-type #footer{
+	margin: 0;
+	padding:155px 0 0 2.1%;
+}
 
 /*Эксперименты*/
 
@@ -468,6 +483,9 @@ a:hover,#logo a:hover {
 			);
 		}
 	}
+body:first-of-type #logo a:hover{
+	padding-top:5px;
+}
 .site_link a{
 	/* Legacy browsers */
 	background: #46c1e4 url(../images/gradient-bg1.png) repeat-y left;
