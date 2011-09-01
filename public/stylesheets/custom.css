@@ -6,8 +6,6 @@
   src: local('Calibri'),
   	   url(../CALIBRI.TTF) format('truetype');
 }*/
-
-
 body,#wrapper,#works,ul,li,h2,h3,p,img{
 	margin:0;
 	padding:0;
@@ -15,6 +13,10 @@ body,#wrapper,#works,ul,li,h2,h3,p,img{
 body{
 	font:16px/1.5  Calibri, sans-serif;
 	background:#FFF;
+	-webkit-font-smoothing:subpixel-antialiased;
+}
+.mac.safari body{
+	font:15px/1.7 sans-serif;
 }
 #wrapper{
 	margin:0 auto;
@@ -41,7 +43,7 @@ a{
 	-moz-border-radius: 2px;
 }
 .safari a{
-	padding:3px 4px 1px;
+	padding:3px 4px 2px;
 }
 @-moz-document url-prefix(){a {padding:0px 4px 1px;}}
 h1{
@@ -93,7 +95,7 @@ cite{
 	-moz-border-radius: 2px;
 }
 .safari #header ul li span{
-	padding:3px 4px 1px;
+	padding:3px 4px 2px;
 }
 @-moz-document url-prefix(){#header ul li span {padding:0px 4px 1px;}}
 #header ul li a{ 
@@ -484,6 +486,9 @@ a:hover,#logo a:hover {
 			);
 		}
 	}
+.safari #logo a:hover {
+	padding-top:5px;
+}
 .site_link a{
 	/* Legacy browsers */
 	background: #46c1e4 url(../images/gradient-bg1.png) repeat-y left;
