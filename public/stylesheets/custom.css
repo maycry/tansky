@@ -1,11 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-@font-face {
+/*@font-face {
   font-family: 'Calibri';
   src: local('Calibri'),
   	   url(../CALIBRI.TTF) format('truetype');
-}
+}*/
 
 
 body,#wrapper,#works,ul,li,h2,h3,p,img{
@@ -40,6 +40,9 @@ a{
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 }
+.safari a{
+	padding:3px 4px 1px;
+}
 @-moz-document url-prefix(){a {padding:0px 4px 1px;}}
 h1{
 	font-size:1.25em;
@@ -56,6 +59,8 @@ p{
 	font-size:0.875em;
 	line-height:1.44em;
 	padding-left:19px;
+	color: #f00; 
+	color: #000;#
 }
 cite{
 	font-style:italic;
@@ -79,7 +84,7 @@ cite{
 }
 #header ul li span{ 
 	letter-spacing:0;
-	margin-bottom:1px;
+	margin:0 0 1px 0;
 	background-color:#e1e1e1;
 	padding:1px 4px 2px;
 	cursor: default ;
@@ -87,9 +92,13 @@ cite{
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 }
-/*#header ul li a{ 
+.safari #header ul li span{
+	padding:3px 4px 1px;
+}
+@-moz-document url-prefix(){#header ul li span {padding:0px 4px 1px;}}
+#header ul li a{ 
 	margin-right: 2px;
-}*/
+}
 .webdes{
 	font-size:0.813em;
 	letter-spacing:0;
@@ -243,6 +252,9 @@ cite{
 a.process {
 	background:url(../images/controls.png) no-repeat;
 	padding:3px 24px 4px 5px;
+}
+.safari a.process {
+	padding-top: 5px;
 }
 @-moz-document url-prefix(){a.process{padding:3px 24px 3px 5px;}}
 a.process:hover{
