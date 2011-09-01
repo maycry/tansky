@@ -18,6 +18,9 @@ body{
 .mac.safari body{
 	font:15px/1.7 sans-serif;
 }
+.linux.safari body{
+	font:15px/1.7 sans-serif;
+}
 #wrapper{
 	margin:0 auto;
 	height:auto;
