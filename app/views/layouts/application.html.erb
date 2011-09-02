@@ -5,6 +5,19 @@
   <%= stylesheet_link_tag "custom", "portfolio", "other_works" %>
   <!--[if IE]><%= stylesheet_link_tag "ie" %><![endif]-->
   <%= javascript_include_tag 'jquery-1.6.2.min', 'slider_on_main', 'works', 'css_browser_selector', :cache => true %>
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10061598-6']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+  </script>
   <%= csrf_meta_tag %>
 
 </head>
