@@ -1,0 +1,10 @@
+<% articles = get_narticles %>
+<%i=0%>
+<%i_count=articles.count%>
+	<% articles.each do |article|%>
+	<% class_name = get_class(i, i_count)%>
+	<%= link_to image_tag(article.pic, :alt => article.name, :class => "#{class_name} work"), work_path(article.alias) %>
+	<%i+=1%>
+<% end %>
+    	</div>
+    <div id="worktitle" align="center"><%= link_to articles.first.name, work_path(articles.first.alias) %>
