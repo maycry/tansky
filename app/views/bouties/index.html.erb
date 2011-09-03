@@ -6,7 +6,7 @@
       <div class="bouties">
       	<% @bouties_use.each do |bouty| %>
         <div class="bouty">
-          <div class="r"> <%= image_tag bouty.pic, :alt => bouty.name %> </div>
+          <div class="r"> <%= image_tag bouty.pic, :title => bouty.name %> </div>
           <div class="min">
           	<% if current_user %>
           	<%= link_to 'Edit', edit_bouty_path(bouty) %>
@@ -26,7 +26,7 @@
           	<%= link_to 'Edit', edit_bouty_path(bouty) %>
     		<%= link_to 'Destroy', bouty, :confirm => 'Are you sure?', :method => :delete %>
     		<% end %>
-          <div class="r"> <%= image_tag bouty.pic, :alt => bouty.name, :class => "book" %> </div>
+          <div class="r"> <%= image_tag bouty.pic, :title => bouty.name, :class => "book" %> </div>
           <div class="min"></div>
         </div>
         <% end %>

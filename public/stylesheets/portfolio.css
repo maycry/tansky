@@ -3,12 +3,9 @@
 
 .floats
 {
-/* Компенсируем отступы между float-блоками, чтобы они занимали все доступное пространство */
 margin: 0 0 100px -2em;
-padding-left: 5%;
+padding-left: 4%;
 padding-top: 25px;
-
-/* Эти правила для IE */
 position: relative;
 display: inline-block;
 clear: both;
@@ -23,16 +20,8 @@ clear: both;
 {
 position: relative;
 float: left;
-
-/* Убираем удвоение отступов в IE */
 display: inline;
-
-/* Прячем все, что вдруг вылезло за наши ограничения */
-
-/* Отсупы между float-блоками */
 margin: 3em 1em 0 2.5em;
-
-/* Задаем минимальную ширину по картинке и тексту */
 width: 14em;
 min-width: 250px;
 }
@@ -46,12 +35,7 @@ width: 100%;
 }
 .floats .pwork .min
 {
-/* Задаем минимальную высоту по картинке */
 margin: 0 0 200px 0;
-
-/* Задаем минимальную высоту по тексту */
 height: 4em;
-
-/* Дублируем значение минимальной ширины по картинке для IE */
 width: 200px;
 }

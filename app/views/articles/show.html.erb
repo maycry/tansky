@@ -4,7 +4,12 @@
 <%= link_to 'Back', articles_path %>
 <% end %>
 <div class="content">
-    <div class="site_link site_link_img"><%= link_to @article.link, "http://#{@article.link}"   %></a></div>
+	<% if @article.link !="" %>
+      <div class="site_link site_link_img"><%= link_to @article.link, "http://#{@article.link}"   %></a></div>
+      <% else%>     
+	  <div class="site_link"></a></div>
+      <% end %>
+    
     <div class="content_header">
       <h1><%= @article.name.mb_chars.upcase.to_s %></h1>
     </div>

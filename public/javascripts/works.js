@@ -16,12 +16,12 @@ $(document).ready(function(){
    	
    	function mover(){
    		if (!$(this).hasClass("opened")) {
-			$(this).css("z-index",z);
 			$(this).animate({
 				width:'+=10',
 				height:'+=10'},times);
-			z++;
 		}
+		$(this).css("z-index",z);
+		z++;
 	}
 	function mleave(){
 		if (!$(this).hasClass("opened")) {
