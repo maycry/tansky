@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:url(../images/404bg.png) repeat;
+}
+#logo{
+	color:#fff;
+}
+a{
+	background-color:#fff;
+	color:#000;
+}
+a:hover{
+	color:#fff;
+}
+#crystal{
+	background:url(../images/404crystal.jpg) center top no-repeat;
+	height:535px;
+	color:#a79ba8;
+	text-align:center;
+	margin-top:50px;
+	padding-top:210px;
+	padding-left:25px;
+	overflow:hidden;
+}
+#crystal span{
+	font-size:3.375em;
+	color:#FFF;
+	opacity: .20; /* Standard: FF gt 1.5, Opera, Safari */
+	filter: alpha(opacity=20); /* IE lt 8 */
+	-ms-filter: "alpha(opacity=20)"; /* IE 8 */
+	-khtml-opacity: .20; /* Safari 1.x */
+	-moz-opacity: .20; /* FF lt 1.5, Netscape */
+	line-height:2.1em;
+}
+#over{
+	overflow:hidden;
+	width:100%;
+	height:auto;
+}
