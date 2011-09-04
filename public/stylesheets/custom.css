@@ -44,6 +44,8 @@ a{
 	border-radius:2px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
+	border: none;
+	white-space: nowrap;
 }
 .safari a{
 	padding:3px 4px 2px;
@@ -384,6 +386,13 @@ a.process:hover{
 	margin: 4px 0 70px 0;
 	width: 70px;
 	height:30px;
+}
+.ico{
+	width:14px;
+	height:12px;
+	padding: 0 !important;
+	margin-bottom: -2px;
+	margin-right:2px;
 }
 #about_me{
 	width:24%;
