@@ -393,6 +393,7 @@ a.process:hover{
 	padding: 0 !important;
 	margin-bottom: -2px;
 	margin-right:2px;
+	background-color: black;
 }
 #about_me{
 	width:24%;
@@ -442,6 +443,7 @@ a.process:hover{
 	}
 }
 
+
 /*Эксперименты*/
 
 #experiments{
@@ -452,6 +454,12 @@ a.process:hover{
 #experiments img{
 	position: absolute;
 	cursor: pointer;
+}
+
+
+/*Эксперименты*/
+#user_nav{
+	margin-left: 60%;
 }
 
 

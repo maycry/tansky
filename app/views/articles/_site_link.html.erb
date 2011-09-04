@@ -1,0 +1,5 @@
+<% if @article.link !="" %>
+	<div class="site_link site_link_img"><%= link_to @article.link.gsub('http://',''), @article.link %></a></div>
+<% else%>     
+	<div class="site_link"></a></div>
+<% end %>

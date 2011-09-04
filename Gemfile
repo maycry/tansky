@@ -8,6 +8,7 @@ gem 'rails', '3.0.9'
 gem 'sqlite3', '1.3.3'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "haml"
+gem 'jquery-rails'
 
 
 # Use unicorn as the web server
