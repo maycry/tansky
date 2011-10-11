@@ -1,41 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
 
-.floats
+#floats
 {
-margin: 0 0 100px -2em;
-padding-left: 4%;
-padding-top: 25px;
-position: relative;
-display: inline-block;
-clear: both;
-}
-.floats:after
-{
-content: '';
-display: block;
-clear: both;
-}
-.floats .pwork
-{
-position: relative;
-float: left;
-display: inline;
-margin: 3em 1em 0 2.5em;
-width: 14em;
-min-width: 250px;
+	margin: 75px 20px;
 }
 
-.floats .pwork .r
+#floats .float
 {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+	margin-bottom:1em;
+	float:left;
+	text-align: center;
+	margin-top: 1em;
 }
-.floats .pwork .min
-{
-margin: 0 0 200px 0;
-height: 4em;
-width: 200px;
-}
+.columns1 .float{width:100%;}
+.columns2 .float{width:49%;}
+.columns3 .float{width:32%;}
+.columns4 .float{width:24%;}
+.columns5 .float{width:19%;}
+.columns6 .float{width:19%;}
+.columns7 .float{width:19%;}

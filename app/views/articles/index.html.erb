@@ -14,18 +14,15 @@
   </li>
 <% end %>
 </ul>-->
-<div class="floats">
+<div id="floats">
 <% @articles.each do |article| %>
-	<div class="pwork">
-		<div class="r" align="center">
-			<%= link_to image_tag(article.pic, :size => '250x250'), work_path(article.alias), :style => "background:none;" %><br />
-			<%= link_to article.name, work_path(article.alias) %><br />
-			<% if current_user %>
-		    <%= link_to 'Edit', portfolio_work_path(article.alias) %>
-		    <%= link_to 'Destroy', destroy_work_path(article.alias), :confirm => 'Are you sure?', :method => :delete %>
-		    <% end %>
-		</div>
-	    <div class="min"></div>
+	<div class="float">
+		<%= link_to image_tag(article.pic, :size => '250x250'), work_path(article.alias), :style => "background:none;" %><br />
+		<%= link_to article.name, work_path(article.alias) %><br />
+		<% if current_user %>
+	    <%= link_to 'Edit', portfolio_work_path(article.alias) %>
+	    <%= link_to 'Destroy', destroy_work_path(article.alias), :confirm => 'Are you sure?', :method => :delete %>
+	    <% end %>
 	</div>
 <% end %>
 </div>
