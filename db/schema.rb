@@ -13,34 +13,34 @@
 ActiveRecord::Schema.define(:version => 20110815163929) do
 
   create_table "articles", :force => true do |t|
-    t.string    "name"
-    t.string    "pic"
-    t.text      "describe"
-    t.text      "process"
-    t.string    "hook"
-    t.boolean   "onmain"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "link"
-    t.string    "alias"
+    t.string   "name"
+    t.string   "pic"
+    t.text     "describe"
+    t.text     "process"
+    t.string   "hook"
+    t.boolean  "onmain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "link"
+    t.string   "alias"
   end
 
   create_table "bouties", :force => true do |t|
-    t.string    "name"
-    t.string    "pic"
-    t.text      "description"
-    t.string    "link"
-    t.string    "bouty_type"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.string   "pic"
+    t.text     "description"
+    t.string   "link"
+    t.string   "bouty_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email"
-    t.string    "password_hash"
-    t.string    "password_salt"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

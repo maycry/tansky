@@ -9,6 +9,7 @@ gem 'sqlite3', '1.3.3'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "haml"
 gem 'jquery-rails'
+gem 'fastimage'
 
 
 # Use unicorn as the web server
