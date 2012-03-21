@@ -99,10 +99,10 @@ cite{
 	-moz-border-radius: 2px;
 }
 .safari #header ul li span{
-	padding:3px 4px 2px;
+	padding:1px 4px 2px;
 }
 .safari #header ul li a{
-	padding:3px 4px 2px;
+	padding:1px 4px 2px;
 }
 #header ul li a{ 
 	margin-right: 2px;
@@ -439,7 +439,7 @@ a.process:hover{
 	float:right;
 }
 .safari #footer{
-	padding:170px 0 2.1% 0px;
+	padding: 165px 0px 2.1% 43px;
 	margin:0 0px 0 0;
 	position:relative;
 	font-size:0.813em;
